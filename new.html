@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2 class="dashboard-title">Shipment Tracking Dashboard</h2>
+            <div class="dashboard-controls">
+                <input type="text" placeholder="Search shipments...">
+                <select>
+                    <option>All Statuses</option>
+                    <option>In Transit</option>
+                    <option>Delivered</option>
+                    <option>Processing</option>
+                    <option>Delayed</option>
+                </select>
+                <select>
+                    <option>All Priorities</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Shipment ID</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Carrier</th>
+                    <th>Est. Delivery</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="shipment-table-body">
+                <tr class="priority-high">
+                    <td><strong>SH-12345</strong></td>
+                    <td>Seattle, WA</td>
+                    <td>New York, NY</td>
+                    <td><span class="status-badge status-in-transit">In Transit</span></td>
+                    <td>High</td>
+                    <td>FedEx Express</td>
+                    <td class="date-upcoming">Mar 15, 2025</td>
+                    <td class="actions">
+                        <button class="action-btn">View</button>
+                        <button class="action-btn">Track</button>
+                    </td>
+                </tr>
+                <tr class="priority-high">
+                    <td><strong>SH-67890</strong></td>
+                    <td>Dallas, TX</td>
+                    <td>Los Angeles, CA</td>
+                    <td><span class="status-badge status-delayed">Delayed</span></td>
+                    <td>High</td>
+                    <td>UPS Next Day</td>
+                    <td class="date-overdue">Mar 11, 2025</td>
+                    <td class="actions">
+                        <button class="action-btn">View</button>
+                        <button class="action-btn">Track</button>
+                    </td>
+                </tr>
+                <tr class="priority-medium">
+                    <td><strong>SH-24680</strong></td>
+                    <td>Miami, FL</td>
+                    <td>Chicago, IL</td>
+                    <td><span class="status-badge status-delivered">Delivered</span></td>
+                    <td>Medium</td>
+                    <td>DHL</td>
+                    <td>Mar 12, 2025</td>
+                    <td class="actions">
+                        <button class="action-btn">View</button>
+                        <button class="action-btn">Receipt</button>
+                    </td>
+                </tr>
+                <tr class="priority-low">
+                    <td><strong>SH-13579</strong></td>
+                    <td>Boston, MA</td>
+                    <td>San Francisco, CA</td>
+                    <td><span class="status-badge status-processing">Processing</span></td>
+                    <td>Low</td>
+                    <td>USPS Priority</td>
+                    <td class="date-upcoming">Mar 18, 2025</td>
+                    <td class="actions">
+                        <button class="action-btn">View</button>
+                        <button class="action-btn">Edit</button>
+                    </td>
+                </tr>
+                <tr class="priority-medium">
+                    <td><strong>SH-97531</strong></td>
+                    <td>Atlanta, GA</td>
+                    <td>Denver, CO</td>
+                    <td><span class="status-badge status-in-transit">In Transit</span></td>
+                    <td>Medium</td>
+                    <td>Amazon Logistics</td>
+                    <td class="date-today">Mar 13, 2025</td>
+                    <td class="actions">
+                        <button class="action-btn">View</button>
+                        <button class="action-btn">Track</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="8">
+                        <div class="summary-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">5</div>
+                                <div class="stat-label">Total Shipments</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">In Transit</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">Delivered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">Processing</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">Delayed</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <div class="pagination">
+            <button class="page-btn" onclick="changePage('first')"><<</button>
+            <button class="page-btn active" onclick="changePage(1)">1</button>
+            <button class="page-btn" onclick="changePage(2)">2</button>
+            <button class="page-btn" onclick="changePage(3)">3</button>
+            <button class="page-btn" onclick="changePage('last')">»</button>
+        </div>
+    </div>
+
+    <script src="work.js"></script>
+</body>
+</html>
