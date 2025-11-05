@@ -1,0 +1,271 @@
+:root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --success: #27ae60;
+            --warning: #e67e22;
+            --danger: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark);
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: var(--padding-main);
+            text-align: center;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dashboard-title {
+            color: var(--primary);
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .dashboard-controls {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .dashboard-controls select,
+        .dashboard-controls input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        /* Enhanced Table Styling */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 6px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 6px;
+        }
+        
+        tbody tr:hover {
+            background-color: rgba(52, 152, 219, 0.05);
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        
+        .status-in-transit {
+            background-color: rgba(52, 152, 219, 0.2);
+            color: #2980b9;
+        }
+        
+        .status-delivered {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #27ae60;
+        }
+        
+        .status-processing {
+            background-color: rgba(155, 89, 182, 0.2);
+            color: #8e44ad;
+        }
+        
+        .status-delayed {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #c0392b;
+        }
+        
+        /* Priority Indicators */
+        tr.priority-high {
+            background-color: rgba(231, 76, 60, 0.08);
+            border-left: 4px solid var(--danger);
+        }
+        
+        tr.priority-medium {
+            background-color: rgba(230, 126, 34, 0.08);
+            border-left: 4px solid var(--warning);
+        }
+        
+        tr.priority-low {
+            border-left: 4px solid var(--gray);
+        }
+        
+        /* Delivery Date Styling */
+        .date-upcoming {
+            color: var(--dark);
+        }
+        
+        .date-today {
+            color: var(--warning);
+            font-weight: 500;
+        }
+        
+        .date-overdue {
+            color: var(--danger);
+            font-weight: 500;
+        }
+        
+        /* Actions Column */
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+        }
+        
+        .action-btn:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        
+        /* Footer Styling */
+        tfoot {
+            background-color: #f8f9fa;
+            font-weight: 500;
+        }
+        
+        tfoot td {
+            padding: 15px;
+        }
+        
+        .summary-stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+        
+        /* Pagination Controls */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+        
+        .page-btn {
+            border: 1px solid #ddd;
+            background-color: white;
+            color: var(--primary);
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .page-btn.active {
+            background-color: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+        
+        .page-btn:hover:not(.active) {
+            background-color: #f8f9fa;
+        }
